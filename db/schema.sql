@@ -1,1 +1,2 @@
-schema.sql
+DROP DATABASE IF EXISTS costume_db;
+CREATE DATABASE costume_db;
