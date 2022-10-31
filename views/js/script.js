@@ -1,4 +1,15 @@
 
+const yesButton = document.getElementById("yesButton");
+
+yesButton.addEventListener("click", function(e) {
+  console.log("yes button was clicked");
+});
+
+const noButton = document.getElementById("noButton");
+
+noButton.addEventListener("click", function(e) {
+  console.log("no button was clicked");
+});
 
 
 // https://gist.github.com/bendc/d7f3dbc83d0f65ca0433caf90378cd95

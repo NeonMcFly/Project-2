@@ -5,7 +5,7 @@ class Costume extends Model {}
 
 Costume.init (
     {
-        costume_id: {
+        id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
@@ -18,7 +18,12 @@ Costume.init (
         costume_filename:{
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        scary_boolean: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            primaryKey: true,
+        },
     },
     {
         sequelize,

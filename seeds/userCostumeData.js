@@ -1,7 +1,7 @@
 const {UserCostume} = require('../models');
 
 const userCostumeData = [
-    {
+   /* {
         scary_boolean: 'false',
     },
     {
@@ -9,7 +9,7 @@ const userCostumeData = [
     },
     {
         scary_boolean: 'false',
-    }
+    }*/
 ];
 
 const seedUserCostume = () => UserCostume.bulkCreate(userCostumeData);
