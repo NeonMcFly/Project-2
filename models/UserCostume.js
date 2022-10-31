@@ -11,25 +11,25 @@ UserCostume.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        user_id: {
+        /*user_id: {
             type: DataTypes.INTEGER
-           /* references: {
+            references: {
                 model: 'User',
                 key: 'user_id',
-            },*/
-        },
+            },
+        },*/
         costume_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'Costume',
-                key: 'costume_id',
+                key: 'id',
             },
         },
-        scary_boolean: {
+        /*scary_boolean: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             primaryKey: true,
-        },
+        },*/
     },
     {
         sequelize,

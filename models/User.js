@@ -12,14 +12,6 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    first_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    last_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -28,13 +20,13 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    costume_choice: {
+    /*costume_choice: {
       type: DataTypes.BOOLEAN
-     /* references: {
+      references: {
         model: 'UserCostume',
         key: 'scary_boolean',
-      },*/
-  },
+      },
+  },*/
   },
   {
     sequelize,
