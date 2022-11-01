@@ -1,4 +1,71 @@
 
+const pumpkinurl = `http://localhost:3001/1`
+const ghosturl = `http://localhost:3001/2`
+const zombieurl = `http://localhost:3001/3`
+
+const photoResults = document.getElementById('photoResults')
+const photobutton1 = document.getElementById('photobutton1')
+const photobutton2 = document.getElementById('photobutton2')
+const photobutton3 = document.getElementById('photobutton3')
+
+/*async function getData() {
+  const response = await fetch(url);
+  const data = await response.json();
+  const {costume_name} =data;
+
+  document.getElementById('costume_name').textContent = costume_name;
+
+}
+getData();*/
+
+photobutton1.addEventListener('click', costumePicture1)
+function costumePicture1(){
+  fetch(pumpkinurl)
+  .then(res => res.json())
+  .then(data => {
+    photoResults1.innerHTML = `<img src="${data.costume_filename}"/>`
+  })
+}
+
+
+photobutton2.addEventListener('click', costumePicture2)
+function costumePicture2(){
+  fetch(ghosturl)
+  .then(res => res.json())
+  .then(data => {
+    photoResults2.innerHTML = `<img src="${data.costume_filename}"/>`
+  })
+}
+
+photobutton3.addEventListener('click', costumePicture3)
+function costumePicture3(){
+  fetch(zombieurl)
+  .then(res => res.json())
+  .then(data => {
+    photoResults3.innerHTML = `<img src="${data.costume_filename}"/>`
+  })
+}
+
+function toggleClass(tagName){
+  console.log(tagName.value);
+  const a = document.getElementById('a');
+  a.classList.toggle(tagName.value);
+};
+
+
+
+function toggleClass(tagName){
+  console.log(tagName.value);
+  const c = document.getElementById('c');
+  c.classList.toggle(tagName.value);
+};
+
+function toggleClass(tagName){
+  console.log(tagName.value);
+  const b = document.getElementById('b');
+  b.classList.toggle(tagName.value);
+};
+/*
 const yesButton = document.getElementById("yesButton");
 
 yesButton.addEventListener("click", function(e) {
@@ -10,7 +77,7 @@ const noButton = document.getElementById("noButton");
 noButton.addEventListener("click", function(e) {
   console.log("no button was clicked");
 });
-
+*/
 
 // https://gist.github.com/bendc/d7f3dbc83d0f65ca0433caf90378cd95
 var supportsES6=function(){try{return new Function("(a=0)=>a"),!0}catch(n){return!1}};
